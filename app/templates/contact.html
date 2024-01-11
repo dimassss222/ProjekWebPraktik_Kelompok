@@ -1,0 +1,55 @@
+{% extends 'navbar.html' %}
+{% block head %}
+<title>Home | Kopi Kenangan</title>
+{% endblock %}
+
+{% block body %}
+    <!-- contact form -->
+    <section id="contact">	
+        <div class="contact-from-section mt-150 mb-150">
+        <div class="container mt-5 mb-5">
+            <div class="col-md-12 mt-5 mb-5 ">
+                <span class="section-title text-center ">Contact Us</span>
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="form-title">
+                        <h2>Have you any question?</h2>
+                        <p>Hubungi Kami jika ada pertanyaan</p>
+                    </div>
+                    <div class="contact-form">
+                        <form type="POST" id="kopi-contact">
+                            <p>
+                                <input type="text" placeholder="Name" name="name" id="name">
+                                <input type="email" placeholder="Email" name="email" id="email">
+                            </p>
+                            <p>
+                                <input type="tel" placeholder="Phone" name="phone" id="phone">
+                                <input type="text" placeholder="Subject" name="subject" id="subject">
+                            </p>
+                            <p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
+                            <div class="text-center mt-3"><button type="submit">Send Message</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-form">
+                        <div class="contact-box">
+                            <h4><img src="static/icons/bootstrap-icons-1.9.0/map.svg" alt=""> Address</h4>
+                            <p>Jl.MANCHESTER UNITED <br> LONDON <br> INGGRIS</p>
+                        </div>
+                        <div class="contact-box">
+                            <h4><img src="static/icons/bootstrap-icons-1.9.0/clock.svg" alt=""> Shop Hours</h4>
+                            <p>SENIN - SABTU: 8 AM to 10 PM </p>
+                        </div>
+                        <div class="contact-box">
+                            <h4><img src="static/icons/bootstrap-icons-1.9.0/phone.svg" alt=""> Contact</h4>
+                            <p>Phone: 089-660-649-778 <br> Email: dimznug22@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact form -->
+{% endblock %}

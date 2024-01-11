@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/css/navbar_dashboard.css">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/" class="image-logo">
+            <img width="40px" src="static/assets/logo/simbol-kopi-kenangan.png" alt="">
+        </a>
+        <span class="profile">
+            <img src="static/assets/user-color.png" alt="">
+            <a href="/dashboard-profil">{{session['username']}}</a>
+        </span>
+    </div>
+    <div id="tombol_keluar" class="tombol_keluar">
+        <img width="40px" src="static/assets/log-out.png" alt="">
+    </div>
+    <div id="peringatan_keluar" class="peringatan_keluar">
+        <div class="inner_peringatan_keluar">
+            <h2>Apakah anda ingin keluar?</h2>
+            <div class="buttons-keluar">
+                <div id="button-iya" class="button-iya">Iya</div>
+                <div id="button-tidak" class="button-tidak">Tidak</div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Menu</header>
+        <ul>
+            <li><a href="/dashboard"><i class="fas"></i>Dashboard</a></li>
+            <li><a href="/dashboard-products"><i class="fas"></i>Produk</a></li>
+            <li><a href="/dashboard-keranjang"><i class="fas"></i>Keranjang</a></li>
+            <li><a href="/dashboard-profil"><i class="far"></i>Profil</a></li>
+            <li><a href="/dashboard-riwayat-pembelian"><i class="fas"></i>Riwayat</a></li>
+            <li><a href="/"><i class="fas"></i>Kembali ke Beranda</a></li>
+        </ul>
+    </div>
+    {% block body %}
+    {% endblock %}
+    <script src="static/java/dashboard_buttons.js"></script>
+
+</body>
+
+</html>

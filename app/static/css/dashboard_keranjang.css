@@ -1,0 +1,49 @@
+.col{
+    border: black solid 2px;
+    width: 70%;
+    height: 150px;
+    background-color: rgba(194, 14, 14, 0.621);
+    margin-bottom: 40px;
+    border-radius: 25px;
+    padding: 25px;
+}
+.col img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 25px;
+    right: 25%;
+    float: right;
+}
+.context{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    color: white;
+}
+.deskripsi-produk{
+    width: 70%;
+    height: 80px;
+    word-wrap: break-word;
+}
+
+.buy-now{
+    border: black solid 2px;
+    margin-top: 5px;
+    border-radius: 25px;
+    color: black;
+    padding: 5px;
+    width: 65px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+.buy-all{
+    border-radius: 25px;
+    padding: 15px 25px 15px 25px;
+    width: 100px;
+    margin-bottom: 50px;
+    background-color: rgba(255, 0, 0, 0.759);
+
+}

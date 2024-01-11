@@ -1,0 +1,8 @@
+.navbar{
+    border: red solid 2px;
+    padding: 20px;
+}
+body{
+    font-family:sans-serif;
+    margin: 0;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/logo/simbol-kopi-kenangan.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="user_pop_up" class="tambahan-user">
+        <p>{{session['username']}}</p>
+        <div style="background-color: black; height: 3px;"></div>
+        <a href="/dashboard">Dashboard</a><br>
+        <a href="/logout">Logout</a>
+    </div>
+    <nav class="navbar navbar-expand-lg shadow-sm fixed-top " style="background-color:#dbdbdb ;">
+        <div class="container">
+            <a class="navbar-brand " href="/"><img src="static/assets/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/products">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/promo">Promo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/galery">Galery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <div id="user" class="fitur-tambahan-user"><img src="static/assets/user.png" alt=""></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- End -->
+    {% block body %}
+    {% endblock %}
+    <!-- End -->
+
+
+    <!-- ***** Footer Start ***** -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/madara.bou.58/?locale=id_ID"><img
+                                        src="static/icons/bootstrap-icons-1.9.0/facebook.svg" alt=""></a></li>
+                            <li><a href=""><img src="static/icons/bootstrap-icons-1.9.0/twitter.svg" alt=""></a></li>
+                            <li><a href="https://www.instagram.com/dimm_nug/"><img
+                                        src="static/icons/bootstrap-icons-1.9.0/instagram.svg" alt=""></a></li>
+                            <li><a href="https://wa.me/6289660649778"><img
+                                        src="static/icons/bootstrap-icons-1.9.0/whatsapp.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="brand">
+                        <a href="/"><img src="static/assets/logo/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© Copyright <b>Kopi Kenangan.</b>
+
+                            <br>Design by: <b>Dimas Anugrah P</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** End Footer ***** -->
+
+
+    <script src="static/bootstrap/js/bootstrap.js"></script>
+    <script src="static/bootstrap/css/main.js"></script>
+    <script src="static/java/navbar_pop_up.js"></script>
+
+</body>
+
+</html>

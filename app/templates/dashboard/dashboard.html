@@ -1,0 +1,84 @@
+{% extends 'dashboard/layout_dashboard.html' %}
+{% block head %}
+    <title>Dashboard</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="card">
+            <h2>Statistics</h2>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            
+            <a href="#" class="btn">View Users</a>
+            <a href="#" class="btn">View Orders</a>
+        </div>
+        
+        <div class="card">
+            <h2>Aktivitas anda</h2>
+            
+            <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+            
+            <a href="/dashboard" class="btn">Refresh Activity</a>
+        </div>
+        <div class="card">
+            <h2>Minuman Favorit anda</h2>
+            <h3>Mango Yuzu Raspberry</h3>
+            <img width="250px" src="static/assets/product/SKU-1.jpg" alt="">
+            <p>Jumlah terbanyak yang telah dibeli dalam sehari: {{7}}</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script>
+        const xValues = ["Jakarta", "Yogyakarta", "Bogor", "Bandung", "Bekasi"];
+        const yValues = [24012, 10234, 8003, 6123, 2045];
+        const barColors = ["rgba(255, 0, 0, 0.611)", "rgba(255, 0, 0, 0.611)","rgba(255, 0, 0, 0.611)","rgba(255, 0, 0, 0.611)","rgba(255, 0, 0, 0.611)"];
+        
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "Pembeli Produk di Indonesia"
+            }
+          }
+        });
+        </script>
+<script>
+    const xValues1 = ["Senin","Selasa","Rabu","Kamis","Jumat","Sabtu", "Minggu"];
+    const yValues1 = [4, 3, 5, 1, 2, 7, 5];
+    
+    new Chart("myChart1", {
+      type: "line",
+      data: {
+        labels: xValues1,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,1.0)",
+          borderColor: "rgba(0,0,255,0.1)",
+          data: yValues1
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{ticks: {min: 0, max:20}}],
+        },
+        title: {
+              display: true,
+              text: "Jumlah Produk yang telah dibeli minggu lalu"
+            }
+      }
+    });
+    </script>
+{% endblock %}
+
+
